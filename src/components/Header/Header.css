@@ -1,0 +1,16 @@
+.header{
+    padding: var(--spacing-lg) 0;
+}
+
+.header-logo{
+    width: 150px;
+    height: auto;
+    margin-bottom: var(--spacing-xs);
+}
+
+.header-title{
+    font-size: 3rem;
+    color: var(--color-text-primary);
+    letter-spacing: 1px;
+    text-shadow: var(--text-shadow-strong);
+}

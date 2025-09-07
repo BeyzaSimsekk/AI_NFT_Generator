@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+  /* Renk Paleti */
+  --color-bg-start:       #19122C;
+  --color-bg-end:         #FF6CC4;
+  --color-text-primary:   #FFFFFF;
+  --color-text-secondary: #E5E1E8;
+  --color-accent-pink:    #FF79B0;
+  --color-accent-purple:  #B566F1;
+  --color-glass-bg:       rgba(255, 255, 255, 0.15);
+  --color-glass-border:   rgba(255, 255, 255, 0.25);
+
+  /* Gradient Tanımı (56° Figma Açı Eşleşmesi) */
+  --gradient-bg: linear-gradient(
+    56deg,
+    var(--color-bg-start) 0%,
+    var(--color-bg-end) 100%
+  );
+
+  /* Tipografi */
+  --font-main:    'Lexend', sans-serif;
+
+  /* Boşluk ve Köşe Yarıçapları */
+  --spacing-xs:   4px;
+  --spacing-sm:   8px;
+  --spacing-md:  16px;
+  --spacing-lg:  24px;
+  --radius-sm:    6px;
+  --radius-md:   12px;
+  --radius-lg:   24px;
+
+  /* Gölge Yükseltmeleri */
+  --shadow-soft:      0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-medium:    0 6px 20px rgba(0, 0, 0, 0.2);
+  --shadow-strong:    0 8px 30px rgba(0, 0, 0, 0.3);
+
+  /* Text-Shadow için */
+  --text-shadow-light:  0 2px 4px rgba(0, 0, 0, 0.3);
+  --text-shadow-strong: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  height: 100%;
+}
+
+/* Temel Body Stilleri */
+body {
+  font-family: var(--font-main);
+  background: var(--gradient-bg);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.flexCenter {
+  display: flex;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+  
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+  
+.flexColCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flexColEnd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Cam Efekti için */
+.glass {
+  background-color: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-md);
+}

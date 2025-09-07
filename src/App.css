@@ -1,0 +1,36 @@
+.app-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: var(--spacing-lg) var(--spacing-md);
+
+  background-image:
+    var(--gradient-bg),
+    url('/rose.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, 120% auto;
+  background-position: center center, 75% -45%;
+}
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: -45%;      /* Figma’daki offset’i taklit et */
+  left: 75%;
+  transform: translateX(-50%);
+  width: 120%;    /* Shape’i biraz taşırarak yerleştir */
+  aspect-ratio: 1;
+  background-image: url('/rose.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.25;  
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* İçerikler üstte kalsın */
+.app-container > * {
+  position: relative;
+  z-index: 1;
+}
