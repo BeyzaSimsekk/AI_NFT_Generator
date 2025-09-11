@@ -1,0 +1,28 @@
+.prompt-input__container {
+  width: 100%;
+  max-width: 600px;
+  margin: var(--spacing-sm) auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.prompt-input__field {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.4;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  padding: var(--spacing-sm);
+}
+
+.prompt-input__field::placeholder {
+  color: var(--color-text-secondary);
+}

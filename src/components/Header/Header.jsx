@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import rose from "../../../public/rose.svg";
+import rose from "/rose.svg";
 //import rose from "../../assets/rose.png";
 
 function Header() {
