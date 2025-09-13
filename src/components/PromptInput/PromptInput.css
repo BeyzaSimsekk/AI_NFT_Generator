@@ -26,3 +26,19 @@
 .prompt-input__field::placeholder {
   color: var(--color-text-secondary);
 }
+
+.prompt-input__random-btn{
+  position: absolute;
+  right: var(--spacing-md);
+  top: var(--spacing-lg);
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.prompt-input__random-btn:hover{
+  color: var(--color-accent-darkPink);
+  transition: color 0.2s ease-in-out;
+  transform: scale(1.1);
+}
